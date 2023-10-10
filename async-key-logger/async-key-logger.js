@@ -1,5 +1,4 @@
 const container = document.querySelector('.container')
-const keyboardInput = document.querySelector('.keyboard-input')
 
 window.addEventListener('keydown', (e) => {
     container.innerHTML = `
@@ -21,9 +20,3 @@ window.addEventListener('keydown', (e) => {
     </table>
     `
 })
-
-// Focus on the input field to trigger the virtual keyboard on mobile
-window.addEventListener('DOMContentLoaded', () => {
-    keyboardInput.style.display = 'block';
-    keyboardInput.focus();
-});
