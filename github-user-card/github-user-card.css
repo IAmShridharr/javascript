@@ -17,6 +17,6 @@ div {
     text-align: center;
 }
 
-h1, p, a {
+h1, p, a, input {
     color: white;
 }

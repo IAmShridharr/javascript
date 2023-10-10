@@ -2,6 +2,6 @@ body {
     background-color: #212121;
 }
 
-h1, p, a {
+h1, p, a, ul {
     color: white;
 }
