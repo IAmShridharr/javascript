@@ -1,0 +1,22 @@
+body {
+    background-color: #212121;
+}
+
+header, footer {
+    text-align: center;
+}
+
+.profile-card > img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: 5px;
+}
+
+div {
+    text-align: center;
+}
+
+h1, p, a {
+    color: white;
+}

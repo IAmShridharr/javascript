@@ -1,0 +1,8 @@
+body {
+    background-color: #212121;
+}
+
+header, div, a, footer {
+    color: white;
+    text-align: center;
+}

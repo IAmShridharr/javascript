@@ -1,0 +1,40 @@
+body {
+    background-color: #212121;
+}
+
+header, footer {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+h1, p, a {
+    color: white;
+}
+
+input {
+    padding: 100px;
+    margin: 20px;
+}
+
+#gray {
+    background-color: gray;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}

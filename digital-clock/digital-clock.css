@@ -1,0 +1,12 @@
+body {
+    background-color: #212121;
+}
+
+footer {
+    text-align: center;
+}
+
+h1, p, a {
+    color: white;
+    text-align: center;
+}
