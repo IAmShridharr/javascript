@@ -23,9 +23,12 @@ form.addEventListener('submit', (e) => {
 
         // Get the required fields of data
         const name = data.name
+        const location = data.location
         const avatarURL = data.avatar_url
         const followers = data.followers
         const profileURL = data.html_url
+        const publicRepos = data.public_repos
+        const bio = data.bio
 
         // Create a container div for the profile card
         const profileCard = document.createElement('div');
@@ -36,13 +39,21 @@ form.addEventListener('submit', (e) => {
         avatarImg.src = avatarURL;
         avatarImg.alt = 'Avatar';
 
-        // Create a paragraph element for the follower count
-        const followersText = document.createElement('p');
-        followersText.textContent = `${name} | Followers: ${followers}`;
+        // Create a paragraph element for the profile information
+        const nameText = document.createElement('p');
+        const infoText = document.createElement('p');
+        const bioText = document.createElement('p');
+
+        // Fill the created elements with appropriate information
+        nameText.textContent = `${(name) ? name : "Name: null"} - ${(location) ? location : "Location: null"}`
+        infoText.textContent = `Followers: ${followers} | Public Repositories: ${publicRepos}`
+        bioText.textContent = `${(bio) ? bio : "Bio: null"}`
 
         // Append the image and followers count to the profile card
         profileCard.appendChild(avatarImg);
-        profileCard.appendChild(followersText);
+        profileCard.appendChild(nameText);
+        profileCard.appendChild(infoText);
+        profileCard.appendChild(bioText);
 
         // Create a button element for the visiting the user's profile page
         const visitButton = document.createElement('a')
@@ -105,13 +116,21 @@ form.addEventListener('submit', (e) => {
             avatarImg.src = avatarURL;
             avatarImg.alt = 'Avatar';
 
-            // Create a paragraph element for the follower count
-            const followersText = document.createElement('p');
-            followersText.textContent = `${name} | Followers: ${followers}`;
+            // Create a paragraph element for the profile information
+            const nameText = document.createElement('p');
+            const infoText = document.createElement('p');
+            const bioText = document.createElement('p');
+
+            // Fill the created elements with appropriate information
+            nameText.textContent = `${(name) ? name : "Name: null"} - ${(location) ? location : "Location: null"}`
+            infoText.textContent = `Followers: ${followers} | Public Repositories: ${publicRepos}`
+            bioText.textContent = `${(bio) ? bio : "Bio: null"}`
 
             // Append the image and followers count to the profile card
             profileCard.appendChild(avatarImg);
-            profileCard.appendChild(followersText);
+            profileCard.appendChild(nameText);
+            profileCard.appendChild(infoText);
+            profileCard.appendChild(bioText);
 
             // Create a button element for the visiting the user's profile page
             const visitButton = document.createElement('a')
