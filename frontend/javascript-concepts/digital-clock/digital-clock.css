@@ -2,11 +2,7 @@ body {
     background-color: #212121;
 }
 
-footer {
+footer, h1, p, a {
     text-align: center;
-}
-
-h1, p, a {
     color: white;
-    text-align: center;
 }

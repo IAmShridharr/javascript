@@ -2,8 +2,12 @@ body {
     background-color: #212121;
 }
 
-header, footer {
+header, footer, div {
     text-align: center;
+}
+
+h1, p, a {
+    color: white;
 }
 
 .profile-card > img {
@@ -11,12 +15,4 @@ header, footer {
     width: 200px;
     border-radius: 20%;
     border: 5px;
-}
-
-div {
-    text-align: center;
-}
-
-h1, p, a {
-    color: white;
 }
