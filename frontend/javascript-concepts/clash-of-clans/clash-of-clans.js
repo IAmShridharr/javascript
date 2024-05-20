@@ -1,7 +1,7 @@
 async function getPlayerInfo() {
     const playerTag = document.getElementById('playerTag').value.trim()
     const sanitizedTag = playerTag.replace('#', '%23') // Encode the '#' character
-    const url = `http://localhost:3000/player/${ sanitizedTag }`
+    const url = `https://coc-proxy.onrender.com/player/${ sanitizedTag }`
 
     const output = document.getElementById('output')
     output.innerHTML = 'Loading...'
