@@ -4,7 +4,7 @@ async function getPlayerInfo() {
     const url = `https://coc-proxy.onrender.com/player/${ sanitizedTag }`
 
     const output = document.getElementById('output')
-    output.innerHTML = 'Loading...'
+    output.innerHTML = '<br>Loading...<br>'
 
     try {
         const response = await fetch(url)
@@ -16,7 +16,7 @@ async function getPlayerInfo() {
         const playerData = await response.json()
         displayPlayerInfo(playerData)
     } catch (error) {
-        output.innerHTML = `<div class="error">${ error.message }</div>`
+        output.innerHTML = `<br><div class="error">${ error.message }</div><br>`
     }
 }
 
