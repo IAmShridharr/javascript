@@ -23,6 +23,7 @@ async function getPlayerInfo() {
 function displayPlayerInfo(playerData) {
     const output = document.getElementById('output')
     output.innerHTML = `
+        <br>
         <div><strong>Name:</strong> ${ playerData.name }</div>
         <div><strong>Tag:</strong> ${ playerData.tag }</div>
         <div><strong>Town Hall Level:</strong> ${ playerData.townHallLevel }</div>
@@ -30,5 +31,6 @@ function displayPlayerInfo(playerData) {
         <div><strong>Experience Level:</strong> ${ playerData.expLevel }</div>
         <div><strong>Clan:</strong> ${ playerData.clan ? playerData.clan.name : 'No Clan' }</div>
         <div><strong>League:</strong> ${ playerData.league ? playerData.league.name : 'No League' }</div>
+        <br>
     `
 }
