@@ -2,11 +2,8 @@ body {
     background-color: #212121;
 }
 
-header, footer, div {
+header, footer, div, h1, p, a {
     text-align: center;
-}
-
-h1, p, a {
     color: white;
 }
 
