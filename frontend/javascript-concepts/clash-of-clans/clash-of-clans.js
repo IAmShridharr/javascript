@@ -4,7 +4,7 @@ async function getPlayerInfo() {
     const url = `https://coc-proxy.onrender.com/player/${ sanitizedTag }`
 
     const output = document.getElementById('output')
-    output.innerHTML = '<br>Loading...<br>'
+    output.innerHTML = '<br>Loading...'
 
     try {
         const response = await fetch(url)
@@ -16,7 +16,7 @@ async function getPlayerInfo() {
         const playerData = await response.json()
         displayPlayerInfo(playerData)
     } catch (error) {
-        output.innerHTML = `<br><div class="error">${ error.message }</div><br>`
+        output.innerHTML = `<br><div class="error">${ error.message }</div>`
     }
 }
 
@@ -31,6 +31,5 @@ function displayPlayerInfo(playerData) {
         <div><strong>Experience Level:</strong> ${ playerData.expLevel }</div>
         <div><strong>Clan:</strong> ${ playerData.clan ? playerData.clan.name : 'No Clan' }</div>
         <div><strong>League:</strong> ${ playerData.league ? playerData.league.name : 'No League' }</div>
-        <br>
     `
 }
