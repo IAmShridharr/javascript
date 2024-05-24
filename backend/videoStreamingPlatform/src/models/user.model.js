@@ -17,7 +17,7 @@ const userSchema = new Schema(
             required: true,
             unique: true,
             lowecase: true,
-            trim: true, 
+            trim: true,
         },
         fullName: {
             type: String,
@@ -25,31 +25,13 @@ const userSchema = new Schema(
             trim: true, 
             index: true
         },
-        avatar: {
-            type: String, // cloudinary url
-            required: true,
-        },
-        coverImage: {
-            type: String, // cloudinary url
-        },
-        watchHistory: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: "Video"
-            }
-        ],
-        password: {
-            type: String,
-            required: [true, 'Password is required']
-        },
-        refreshToken: {
-            type: String
-        }
-
+        avatar: { type: String, required: true },
+        coverImage: { type: String },
+        watchHistory: [{ type: Schema.Types.ObjectId, ref: "Video" }],
+        password: { type: String, required: [true, 'Password is required'] },
+        refreshToken: { type: String }
     },
-    {
-        timestamps: true
-    }
+    { timestamps: true }
 )
 
 userSchema.pre("save", async function (next) {
@@ -72,20 +54,15 @@ userSchema.methods.generateAccessToken = function(){
             fullName: this.fullName
         },
         process.env.ACCESS_TOKEN_SECRET,
-        {
-            expiresIn: process.env.ACCESS_TOKEN_EXPIRY
-        }
+        { expiresIn: process.env.ACCESS_TOKEN_EXPIRY }
     )
 }
+
 userSchema.methods.generateRefreshToken = function() {
     return jwt.sign(
-        {
-            _id: this._id,
-        },
+        { _id: this._id, },
         process.env.REFRESH_TOKEN_SECRET,
-        {
-            expiresIn: process.env.REFRESH_TOKEN_EXPIRY
-        }
+        { expiresIn: process.env.REFRESH_TOKEN_EXPIRY }
     )
 }
 

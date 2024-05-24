@@ -1,8 +1,10 @@
 import connectDB from "./db/connection.js";
-import { configDotenv } from "dotenv"
+import dotenv from "dotenv"
 import app from "./app.js"
 
-configDotenv.apply()
+dotenv.config({
+    path: './.env'
+})
 
 connectDB().then(() => {
     app.on("error", (error) => {
